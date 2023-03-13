@@ -1,0 +1,29 @@
+.gallery {
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        max-width: 240px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.625rem;
+
+        @mixin atSmall {
+        max-width: 350px;
+        height: 300px;
+        object-fit: cover;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 350px;
+    }
+}
